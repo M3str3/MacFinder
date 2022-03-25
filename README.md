@@ -3,7 +3,6 @@
 
 *How works*:
 The script comunicate with ***MacVendors Api***  -> https://api.macvendors.com/
-The synstax:
 
 ```
 ~$ curl https://api.macvendors.com/YOURMAC 
