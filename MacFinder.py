@@ -36,13 +36,14 @@ macs=texto.split("\n")
 if args.output:
     output_file=open(args_output,'w')
 else:
-    output_file=open('output.txt','w')
+    output_file=None
 
 for mac in macs:
     comando = 'curl https://api.macvendors.com/'+mac
-    x=os.popen(comando).read()
-    output_file.write(mac+" ; "+(x)+"\n")
-    print("\n Mac -> "+str(mac)+" Fabricante -> "+str(x)+" \n")
+    resp=os.popen(comando).read()
+    if output_file not None:
+        output_file.write(mac+" ; "+(resp)+"\n")
+    print(f"\n Mac -> {mac} Fabricante -> {resp} \n")
     sleep(1.1)
 
     
