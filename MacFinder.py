@@ -21,9 +21,13 @@ args_inputFile = argv['file']
 args_output = argv['output']
 
 def requestVendor(mc):
-    Command = 'curl https://api.macvendors.com/'+mac
-    response=os.popen(Command).read()
-    return response
+    mc = str(mc).reaplce('-','').replace(':','').strip()
+    if len(mc)=12
+        Command = 'curl https://api.macvendors.com/'+mc
+        response=os.popen(Command).read()
+        return response
+    else:
+        print(f'{datetime.now()} | {mc} is not a valid MAC')
 
 if args.file:
     inputFile=args_inputFile
