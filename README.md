@@ -11,7 +11,7 @@ The script comunicate with ***MacVendors Api***  -> https://api.macvendors.com/
 Can just execute and query for diferent macs or You can put file to extract de mac and another to the output, so the correct usage for the script is like that:
 
 ```
-~$ python.exe .\MacFinder.py -f exaple.txt -o output.txt
+~$ python.exe .\MacFinder.py -f example.txt -o output.txt
 ```
 
 In this example the txt have this format:
